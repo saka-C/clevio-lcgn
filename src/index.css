@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+    .font-poppins-400 {
+        @apply font-poppins font-poppins400;
+    }
+    .font-poppins-500 {
+        @apply font-poppins font-poppins500;
+    }
+    .font-poppins-600 {
+        @apply font-poppins font-poppins600;
+    }
+    .font-poppins-700 {
+        @apply font-poppins font-poppins700;
+    }
+    html {
+        scroll-behavior: smooth;
+        font-family: "Poppins", sans-serif;
+    }
+    html::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+    html::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 6px;
+    }
+    h1 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 2.25rem;
+    }
+    h3 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    h4 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+    h5 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    h6 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}
