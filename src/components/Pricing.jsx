@@ -2,14 +2,12 @@ import CardPrice from "./CardPrice";
 
 const Pricing = () => {
   return (
-    <section className="mt-32">
+    <section className="mt-32" id="informasi">
       <h1 className="text-center mb-5">
         Informasi Pendaftaran Lomba Cipta Game Nasional
       </h1>
       <h5 className="text-center text-gray-700">
-        Lorem ipsum dolor sit amet consectetur. Purus ac nulla at ipsum morbi.
-        Eu quam amet id egestas phasellus. Faucibus ornare a laoreet massa
-        mauris volutpat.{" "}
+        Segera daftarkan tim Mu, dengan memilih sesuai dengan kriteria yang kamu inginkan.
       </h5>
 
       <div className="flex flex-wrap justify-center gap-20 mt-14">

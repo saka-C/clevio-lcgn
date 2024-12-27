@@ -92,7 +92,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 mt-32">
+    <div className="w-full max-w-6xl mx-auto px-4 mt-32" id="testimoni">
         <div className="sm:mx-0 mx-5">
             <h4 className="text-secondary-500">Testimonial</h4>
             <h1 className="sm:w-9/12">Apa Kata Mereka Tentang Lomba Cipta Game Nasional?</h1>

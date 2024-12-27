@@ -7,6 +7,7 @@ import Testimonial from './components/Testimonial';
 import Sponsorship from './components/Sponsorship';
 import Footer from './components/Footer';
 import FlowEvent from './components/FlowEvent';
+import Champions from './components/Champions';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <Layout /> 
       <FlowEvent />
+      <Champions />
       <Juri />
       <Testimonial />
       <Sponsorship />

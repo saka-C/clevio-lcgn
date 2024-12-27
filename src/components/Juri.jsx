@@ -3,7 +3,7 @@ import CardJuri from "./CardJuri";
 
 const Juri = () => {
   return (
-    <div className="relative min-h-screen flex justify-center items-center overflow-hidden mt-32">
+    <div className="relative min-h-screen flex justify-center items-center overflow-hidden mt-20">
       <div className="absolute bottom-0 -left-28 pointer-events-none -z-10">
         <Vector />
       </div>

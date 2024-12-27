@@ -11,7 +11,7 @@ const AnimatedStat = ({ targetValue, label }) => {
           setHasAnimated(true);
           let currentValue = 0;
           const duration = 2000;
-          const interval = 50; 
+          const interval = 50;
           const step = Math.ceil(targetValue / (duration / interval));
 
           const intervalId = setInterval(() => {
@@ -46,7 +46,7 @@ const AnimatedStat = ({ targetValue, label }) => {
 
 const About = () => {
   return (
-    <section className="mt-28">
+    <section className="mt-28" id="tentang">
       <img src="/images/shape.png" alt="" />
       <div className="flex xl:flex-row flex-col gap-20 -mt-40">
         <div className="flex flex-col xl:w-1/2">
@@ -70,18 +70,17 @@ const About = () => {
           <h1>Apa Itu Lomba Cipta Game Nasional Clevio?</h1>
           <div className="inline-block bg-gradient-to-r rounded-full from-secondary-500 to-secondary-300 w-1/2 h-2"></div>
           <h5 className="mt-7 text-gray-700">
-            Lorem ipsum dolor sit amet consectetur. Integer magnis sed dictum
-            gravida. Tincidunt vitae arcu curabitur mi scelerisque porttitor
-            fringilla nisi. Ipsum ullamcorper hac tortor dui fames eu venenatis
-            eget nullam. Sit gravida at faucibus lectus nunc arcu venenatis eget
-            libero. Sagittis molestie cras risus at a. Tellus commodo nulla arcu
-            scelerisque fermentum mattis nullam eget integer. Mi ipsum enim sed
-            pharetra lobortis lacus. Duis felis consectetur amet adipiscing
-            vitae iaculis. Nibh hendrerit sit diam dui venenatis scelerisque non
-            et erat. Nulla elementum porta quam sed consectetur duis quis sit.
-            Eu rhoncus cursus hac quam. Fames quis faucibus nec tortor. Sem
-            tortor massa sit nisl dolor libero viverra. Donec quis at imperdiet
-            eget mi commodo fringilla in morbi. Integer amet.
+            Clevio Innovator Camp membuka tahun 2025 dengan menghadirkan program
+            lokakarya dan kompetisi pembuatan game berbasis AI untuk siswa
+            SMA/SMK dan guru. Acara ini dirancang untuk membekali peserta dengan
+            keterampilan teknologi terkini, mendorong kreativitas, dan
+            meningkatkan metode pengajaran melalui integrasi kecerdasan buatan
+            dalam pendidikan. Program ini dimulai dengan lokakarya daring
+            tentang penggunaan AI dalam pembuatan game, dilanjutkan dengan
+            kompetisi pembuatan game edukatif bertema "Keberlanjutan". Para
+            finalis akan berkesempatan memamerkan karya mereka dalam acara
+            publik di mal, memperkenalkan inovasi mereka kepada masyarakat luas
+            sekaligus meningkatkan kesadaran akan isu-isu lingkungan.
           </h5>
         </div>
       </div>

@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="flex lg:flex-row flex-col-reverse items-center mt-24">
       <div
         data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
+        data-aos-duration="2000"
         className="lg:w-1/2 w-full"
       >
         <h1 className="mb-5 sm:text-[2.5rem] text-[1.5rem]">
@@ -15,8 +15,8 @@ const Hero = () => {
           </span>
         </h1>
         <h5 className="sm:mb-16 mb-10 text-gray-700">
-          Lorem ipsum dolor sit amet consectetur. Dictum nullam porttitor enim
-          eleifend nunc. Lectus quis rhoncus bibendum massa.
+          Tunjukkan kreativitasmu dan ciptakan game terbaikmu! Di ajang lomba cipta
+          game nasional dan jadi bagian generasi developer muda.
         </h5>
         <div className="sm:flex items-center gap-9">
           <Button text="Daftar Sekarang" page="#" />
@@ -29,8 +29,8 @@ const Hero = () => {
       </div>
       <div
         data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
-        data-aos-delay="100"
+        data-aos-duration="2000"
+        data-aos-delay="300"
         className="lg:w-1/2 w-full flex items-center justify-center"
       >
         <img src="/images/heroimg.png" alt="" />
