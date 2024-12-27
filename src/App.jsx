@@ -6,6 +6,7 @@ import Juri from './components/Juri';
 import Testimonial from './components/Testimonial';
 import Sponsorship from './components/Sponsorship';
 import Footer from './components/Footer';
+import FlowEvent from './components/FlowEvent';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter basename="/"> 
       <Navbar />
       <Layout /> 
+      <FlowEvent />
       <Juri />
       <Testimonial />
       <Sponsorship />

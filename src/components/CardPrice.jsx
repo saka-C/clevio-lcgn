@@ -16,7 +16,7 @@ const CardPrice = ({ title, linkto = "", items = [], children }) => {
             </ul>
         </div>
       <a
-        className="bg-primary-500 self-baseline text-white font-semibold rounded-lg py-3 w-full text-center block"
+        className="bg-primary-500 self-baseline hover:scale-105 transition-all duration-150 text-white font-semibold rounded-lg py-3 w-full text-center block"
         href={linkto}
       >
         Daftar Sekarang

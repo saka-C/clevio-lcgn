@@ -37,7 +37,7 @@ const Pricing = () => {
           ]}
         >
           <div className="flex items-baseline space-x-1">
-            Rp.150K
+            Rp.250K
             <span className="text-sm text-gray-500">/tim</span>
           </div>
         </CardPrice>
@@ -52,7 +52,7 @@ const Pricing = () => {
           ]}
         >
           <div className="flex items-baseline space-x-1">
-            Rp.125K
+            Rp.150K
             <span className="text-sm text-gray-500">/Orang</span>
           </div>
         </CardPrice>

@@ -3,59 +3,73 @@
 @tailwind utilities;
 
 @layer base {
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-    .font-poppins-400 {
-        @apply font-poppins font-poppins400;
-    }
-    .font-poppins-500 {
-        @apply font-poppins font-poppins500;
-    }
-    .font-poppins-600 {
-        @apply font-poppins font-poppins600;
-    }
-    .font-poppins-700 {
-        @apply font-poppins font-poppins700;
-    }
-    html {
-        scroll-behavior: smooth;
-        font-family: "Poppins", sans-serif;
-    }
-    html::-webkit-scrollbar {
-        width: 12px;
-        height: 12px;
-    }
-    html::-webkit-scrollbar-thumb {
-        background-color: gray;
-        border-radius: 6px;
-    }
-    h1 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-size: 2.5rem;
-    }
-    h2 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-size: 2.25rem;
-    }
-    h3 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-size: 2rem;
-    }
-    h4 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-size: 1.25rem;
-    }
-    h5 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-size: 1rem;
-    }
-    h6 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-size: 1rem;
-    }
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+  .font-poppins-400 {
+    @apply font-poppins font-poppins400;
+  }
+  .font-poppins-500 {
+    @apply font-poppins font-poppins500;
+  }
+  .font-poppins-600 {
+    @apply font-poppins font-poppins600;
+  }
+  .font-poppins-700 {
+    @apply font-poppins font-poppins700;
+  }
+  html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+  }
+  html::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  html::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 6px;
+  }
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .flow-event-section {
+    background-image: url("/images/bg.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+  }
+  .ripped{
+    background-color: #1c3894;
+    width: 50px;
+    height: 28px;
+    border-radius: 0px 0px 200px 200px;
+    border: 2px black solid ;
+    border-top: 0px;
+  }
 }

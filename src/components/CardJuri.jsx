@@ -2,7 +2,7 @@ const CardJuri = ({ images = "", name, title, instagram = "", linkin = "" }) => 
     return (
         <div className="flex flex-col items-center">
             <img src={`/images/${images}`} alt={name} className="rounded-full w-40 -mb-20 z-10" />
-            <div className="bg-white flex flex-col items-center rounded-xl text-center w-72">
+            <div className="bg-white flex flex-col items-center rounded-xl text-center w-72 shadow-secondary-200 shadow-xl">
                 <div className="bg-secondary-500 h-10 w-full rounded-t-xl"></div>
                 <div className="pt-14 py-9 px-5 text-center">
                     <h4 className="font-bold">{name}</h4>
