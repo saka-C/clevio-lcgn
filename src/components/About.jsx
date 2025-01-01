@@ -3,8 +3,48 @@ import { useEffect, useState } from "react";
 const AnimatedStat = ({ targetValue, label }) => {
   const [displayValue, setDisplayValue] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
+    // Check if all images are loaded
+    const checkImagesLoaded = () => {
+      const images = document.querySelectorAll('img');
+      const totalImages = images.length;
+      let loadedImages = 0;
+
+      // If there are no images, consider them loaded
+      if (totalImages === 0) {
+        setImagesLoaded(true);
+        return;
+      }
+
+      // Check each image
+      images.forEach(img => {
+        if (img.complete) {
+          loadedImages++;
+        } else {
+          img.addEventListener('load', () => {
+            loadedImages++;
+            if (loadedImages === totalImages) {
+              setImagesLoaded(true);
+            }
+          });
+        }
+      });
+
+      // If all images are already loaded
+      if (loadedImages === totalImages) {
+        setImagesLoaded(true);
+      }
+    };
+
+    checkImagesLoaded();
+  }, []);
+
+  useEffect(() => {
+    // Only set up the observer if images are loaded
+    if (!imagesLoaded) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
@@ -34,7 +74,7 @@ const AnimatedStat = ({ targetValue, label }) => {
     }
 
     return () => observer.disconnect();
-  }, [targetValue, label, hasAnimated]);
+  }, [targetValue, label, hasAnimated, imagesLoaded]);
 
   return (
     <div className="flex flex-col items-center sm:px-10 px-5 py-5" id={label}>
@@ -48,16 +88,16 @@ const About = () => {
   return (
     <section className="mt-28" id="tentang">
       <img src="/images/shape.png" alt="" />
-      <div className="flex xl:flex-row flex-col gap-20 -mt-40">
+      <div className="flex lg:flex-row flex-col gap-20 -mt-40">
         <div className="flex flex-col xl:w-1/2">
           <div className="flex xl:items-end xl:justify-end justify-center items-center">
             <img
               src="/images/aboutimg.png"
               alt="about"
-              className="rounded-xl xl:w-11/12"
+              className="rounded-xl lg:w-11/12 sm:w-4/5"
             />
           </div>
-          <div className="flex xl:justify-end justify-center mt-11">
+          <div className="flex justify-center mt-11">
             <AnimatedStat targetValue={100} label="Peserta" />
             <div className="flex flex-col items-center px-2 border-l-4 border-r-4 border-gray-200">
               <AnimatedStat targetValue={50} label="Karya Digital" />

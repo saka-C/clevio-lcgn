@@ -9,28 +9,28 @@ const Testimonial = () => {
 
   const testimonials = [
     {
-      image: "testi.png",
-      text: "Lorem ipsum dolor sit amet consectetur. At volutpat dictumst odio arcu bibendum posuere sit sit at. Pellentesque tellus lectus ullamcorper enim. Pellentesque semper est tincidunt commodo sed facilisis ultricies. Tempor elementum integer enim aliquam et natoque diam sed.",
-      name: "Jumiko",
-      role: "Head Master Lorem School",
+      image: "testi1.png",
+      text: "Pengalaman baru, tambahan keterampilan tentang membuat games dengan bantuan AI",
+      name: "Yuli Dianah",
+      role: "Ketua Konsentrasi Keahlian RPL - SMKN 1 Cibinong",
     },
     {
-      image: "testi.png",
-      text: "Lorem ipsum dolor sit amet consectetur. At volutpat dictumst odio arcu bibendum posuere sit sit at. Pellentesque tellus lectus ullamcorper enim. Pellentesque semper est tincidunt commodo sed facilisis ultricies. Tempor elementum integer enim aliquam et natoque diam sed.",
-      name: "Jumiko",
-      role: "Head Master Lorem School",
+      image: "testi2.png",
+      text: "Karna ini menjadi pengalaman pertama untuk kelas X di sekolah kami, menjadikan siswa kami merasa senang tentang bahasa pemerograman  HTML, CSS dan Javascript",
+      name: "Doni Putra Setiawan",
+      role: "Guru SMKN 1 Gunung Putri",
     },
     {
-      image: "testi.png",
-      text: "Lorem ipsum dolor sit amet consectetur. At volutpat dictumst odio arcu bibendum posuere sit sit at. Pellentesque tellus lectus ullamcorper enim. Pellentesque semper est tincidunt commodo sed facilisis ultricies. Tempor elementum integer enim aliquam et natoque diam sed.",
-      name: "Jumiko",
-      role: "Head Master Lorem School",
+      image: "testi3.png",
+      text: "Sering - sering mengadakan workshop dan perlombaan seperti ini, karena siswa juga pasti senang selain menikmati game, siswa juga bisa mencoba untuk membuatnya.",
+      name: "Ang Kian Chye",
+      role: "Guru SMA Kristen Immanuel Pontianak",
     },
     {
-      image: "testi.png",
-      text: "Lorem ipsum dolor sit amet consectetur. At volutpat dictumst odio arcu bibendum posuere sit sit at. Pellentesque tellus lectus ullamcorper enim. Pellentesque semper est tincidunt commodo sed facilisis ultricies. Tempor elementum integer enim aliquam et natoque diam sed.",
-      name: "Jumiko",
-      role: "Head Master Lorem School",
+      image: "testi4.png",
+      text: "Lomba yang sangat seru, bisa liat game game keren yang udah dibuat sama sekolah sekolah lain.",
+      name: "Shaka Aufa",
+      role: "Juara 1 & Umum LCGN 2023",
     },
   ];
 
@@ -93,10 +93,12 @@ const Testimonial = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 mt-32" id="testimoni">
-        <div className="sm:mx-0 mx-5">
-            <h4 className="text-secondary-500">Testimonial</h4>
-            <h1 className="sm:w-9/12">Apa Kata Mereka Tentang Lomba Cipta Game Nasional?</h1>
-        </div>
+      <div className="sm:mx-0 mx-5">
+        <h4 className="text-secondary-500">Testimonial</h4>
+        <h1 className="sm:w-9/12">
+          Apa Kata Mereka Tentang Lomba Cipta Game Nasional?
+        </h1>
+      </div>
       <div
         ref={sliderRef}
         className="flex overflow-x-auto gap-6 py-8 px-2 hide-scrollbar"
@@ -115,25 +117,32 @@ const Testimonial = () => {
             key={index}
             className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] "
           >
-            <div className="bg-white p-8 rounded-3xl shadow-lg h-full">
-              {/* Quote Icon */}
-              <div className="text-5xl text-gray-300 mb-6">
-                <i class="bx bxs-quote-left"></i>
-              </div>
+            <div className="bg-white p-8 rounded-3xl shadow-lg h-full flex flex-col justify-between">
+              <div>
+                {/* Quote Icon */}
+                <div className="text-5xl text-gray-300 mb-6">
+                  <i class="bx bxs-quote-left"></i>
+                </div>
 
-              {/* Testimonial Text */}
-              <h5 className="text-gray-600 mb-8 leading-relaxed">
-                {testimonial.text}
-              </h5>
+                {/* Testimonial Text */}
+                <h5 className="text-gray-600 mb-8 leading-relaxed">
+                  {testimonial.text}
+                </h5>
+              </div>
 
               {/* Author Info */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
-                  <img
-                    src={`images/${testimonial.image}`}
-                    alt={testimonial.name}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="relative w-16 h-16 shrink-0">
+                  {/* Container bulat dengan background */}
+                  <div className="absolute inset-0 bg-gray-200 rounded-full" />
+                  {/* Wrapper untuk gambar dengan mask */}
+                  <div className="relative w-full h-full rounded-full overflow-hidden">
+                    <img
+                      src={`images/${testimonial.image}`}
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">

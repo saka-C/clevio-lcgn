@@ -8,6 +8,7 @@ import Sponsorship from './components/Sponsorship';
 import Footer from './components/Footer';
 import FlowEvent from './components/FlowEvent';
 import Champions from './components/Champions';
+import PricepoolSection from './components/PricepoolSection';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <Layout /> 
       <FlowEvent />
+      <PricepoolSection />
       <Champions />
       <Juri />
       <Testimonial />

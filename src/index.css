@@ -64,6 +64,12 @@
     background-position: center; 
     background-repeat: no-repeat; 
   }
+  .prizepool {
+    background-image: url("/images/bg-prize.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+  }
   .ripped{
     background-color: #1c3894;
     width: 50px;

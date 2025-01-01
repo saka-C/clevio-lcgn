@@ -13,7 +13,7 @@ const Juri = () => {
       </div>
 
         <div className="flex flex-col items-center gap-10">
-            <h1 className="text-center sm:text-[40px] text-[2rem] flex items-center gap-5 mx-14">
+            <h1 className="text-center sm:text-[40px] text-[2rem] flex items-center sm:gap-5 gap-2 sm:mx-14">
                 <i class="bx bxs-certification text-primary-500"></i>
                 Para Juri Hebat Di LCGN
                 <i class="bx bxs-certification text-primary-500"></i>

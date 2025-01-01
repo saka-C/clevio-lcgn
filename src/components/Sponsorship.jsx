@@ -5,12 +5,12 @@ const Sponsorship = () => {
 
   const partners = [
     {
-      name: "Trans Studio Mall",
-      logo: "/images/tsm.png",
+      name: "Living World",
+      logo: "/images/livingworld.png",
     },
     {
-      name: "Axioo",
-      logo: "/images/axio.png",
+      name: "Advan",
+      logo: "/images/advan.png",
     },
     {
       name: "Kominfo",
@@ -41,7 +41,7 @@ const Sponsorship = () => {
   }, []);
 
   return (
-    <section id="partner-section" className="py-20 mt-32">
+    <section id="partner-section" className="py-20 mt-32 ">
       <div className="max-w-6xl mx-auto px-4">
         {/* Section Title */}
         <h1
@@ -57,17 +57,18 @@ const Sponsorship = () => {
         </h1>
 
         {/* Partners Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 md:gap-5 md:gap-y-10 items-center justify-items-center px-10">
+        <div class="sm:grid flex flex-wrap sm:grid-cols-3 lg:grid-cols-3 gap-10 md:gap-5 md:gap-y-10 items-center place-items-center px-10 justify-center">
           {partners.map((partner, index) => (
             <div
               key={index}
-              className={`w-full flex items-center justify-center
+              className={`sm:w-full w-2/5 flex items-center justify-center 
                 transition-all duration-700 transform delay-${index * 200}
                 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 }`}
+                
               style={{
                 transitionDelay: `${index * 200}ms`,
               }}

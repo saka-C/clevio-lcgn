@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Button from "./Button";
 import "boxicons/css/boxicons.min.css";
 
@@ -32,8 +31,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed z-50 top-0 flex items-center justify-between w-full px-6 lg:px-24 bg-[#EFEFEF] transition-shadow duration-300 ${
-        isScrolled ? "shadow-md" : ""
+      className={`fixed z-50 top-0 flex items-center justify-between w-full px-6 lg:px-24  transition-shadow duration-300 ${
+        isScrolled ? "shadow-md bg-[#EFEFEF]" : ""
       }`}
     >
       <div className="flex items-center">
@@ -66,7 +65,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="hidden lg:block">
-        <Button page="#" text="Contact" />
+        <Button page="https://clev.io/chat" text="Contact" />
       </div>
 
       {/* Hamburger Menu */}
@@ -116,7 +115,7 @@ const Navbar = () => {
           >
             Sponsorship
           </button>
-          <Button page="#" text="Contact" />
+          <Button page="https://clev.io/chat" text="Contact" />
         </div>
       </div>
     </nav>

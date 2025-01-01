@@ -30,29 +30,21 @@ const Kriteria = () => {
         <div className="ripped xl:block hidden"></div>
       </div>
 
-    <h2 className="px-10">Kriteria Penilaian</h2>
+      <h2 className="px-10">Kriteria Penilaian</h2>
       <div className="overflow-x-auto p-10">
-      <table className="min-w-[640px] w-full table-auto border-collapse">
-        <tbody>
-          <Row
-            name="Tema"
-            desc="Lorem ipsum dolor sit amet consectetur. Lacus lacus sed commodo a platea elit elementum in. Amet laoreet odio nec sed maecenas aliquam vitae."
-            percent="60%"
-          />
-          <Row
-            name="Kreativitas"
-            desc="Lorem ipsum dolor sit amet consectetur. Lacus lacus sed commodo a platea elit elementum in. Amet laoreet odio nec sed maecenas aliquam vitae."
-            percent="30%"
-            isStriped
-          />
-          <Row
-            name="Orisinalitas"
-            desc="Lorem ipsum dolor sit amet consectetur. Lacus lacus sed commodo a platea elit elementum in. Amet laoreet odio nec sed maecenas aliquam vitae."
-            percent="10%"
-          />
-        </tbody>
-      </table>
-    </div>
+        <table className="min-w-[640px] w-full table-auto border-collapse">
+          <tbody>
+            <Row
+              name="Orisinal"
+              desc="berapa orisinal software yang dibuat team peserta sendiri? Apakah 100% orisinal? Apakah mengembangkan inspirasi sumber lain? Apakah sekedar meniru sumber lain? (mempunyai ciri khas, menghindari copy-paste karya orang lain, menghadirkan sesuatu yang baru)."
+            />
+            <Row name="Manfaat" desc="Seberapa seru dan asik gimmu dalam mengajarkan hal baru? Apakah gimmu berhasil bikin pemainnya ketagihan belajar?, Apakah gimmu berhasil bikin pemainnya paham konsep sulit jadi gampang? Atau mungkin, gimmu bisa bikin pemainnya jadi lebih kreatif dan inovatif dalam memecahkan masalah?" isStriped />
+            <Row name="Menyenangkan" desc="Berapa menyenangkan software game ini?  Berapa penasaran dari pemain untuk menguasainya? (nilai hiburan, plot tantangan, konteks cerita, karakter). " />
+            <Row name="Kualitas operasi software" desc="Sebi kapa software game ini berjalan? Seberapa halus animasinya? Apakah 100% selesai? Apakah masih ada error?" isStriped/>
+            <Row name="Komposisi Design" desc="Seberapa bagus perpaduan warna, bentuk, tulisan, gambar, dan suara game karya peserta lomba? " />
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

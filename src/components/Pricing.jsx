@@ -7,13 +7,13 @@ const Pricing = () => {
         Informasi Pendaftaran Lomba Cipta Game Nasional
       </h1>
       <h5 className="text-center text-gray-700">
-        Segera daftarkan tim Mu, dengan memilih sesuai dengan kriteria yang kamu inginkan.
+        Segera daftarkan tim Mu, dengan memilih kriteria yang sesuai.
       </h5>
 
       <div className="flex flex-wrap justify-center gap-20 mt-14">
         <CardPrice
           title="Peserta Guru"
-          linkto="#"
+          linkto="https://docs.google.com/forms/d/e/1FAIpQLSct72KNwiXgg-viCyjzxjGiukYmO7HD1AKwIZQB3yD4v8yA6Q/viewform?usp=dialog"
           items={[
             "1 tim, minimal 2 orang.",
             "Mengikuti Workshop & Hackaton.",
@@ -27,7 +27,7 @@ const Pricing = () => {
 
         <CardPrice
           title="Peserta Siswa SMA/SMK"
-          linkto="#"
+          linkto="https://docs.google.com/forms/d/e/1FAIpQLSc54p4_WShdY4xruLrYzsVzlF837jStgicPSO48idzk1OXMEA/viewform?usp=dialog"
           items={[
             "1 tim, minimal 2 orang.",
             "Mengikuti Workshop & Hackaton.",
@@ -42,7 +42,7 @@ const Pricing = () => {
 
         <CardPrice
           title="Peserta Workshop"
-          linkto="#"
+          linkto="https://docs.google.com/forms/d/e/1FAIpQLSc5C6CK1WS5Ba_VrmeHpZ-8-gSBjrMX-XP-JavPC_aFWg8-lg/viewform?usp=dialog"
           items={[
             "1 Orang. ",
             "Mengikuti Workshop.",
