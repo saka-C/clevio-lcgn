@@ -1,57 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const AnimatedStat = ({ targetValue, label }) => {
   const [displayValue, setDisplayValue] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const statRef = useRef(null);
 
   useEffect(() => {
-    // Check if all images are loaded
-    const checkImagesLoaded = () => {
-      const images = document.querySelectorAll('img');
-      const totalImages = images.length;
-      let loadedImages = 0;
-
-      // If there are no images, consider them loaded
-      if (totalImages === 0) {
-        setImagesLoaded(true);
-        return;
-      }
-
-      // Check each image
-      images.forEach(img => {
-        if (img.complete) {
-          loadedImages++;
-        } else {
-          img.addEventListener('load', () => {
-            loadedImages++;
-            if (loadedImages === totalImages) {
-              setImagesLoaded(true);
-            }
-          });
-        }
-      });
-
-      // If all images are already loaded
-      if (loadedImages === totalImages) {
-        setImagesLoaded(true);
-      }
-    };
-
-    checkImagesLoaded();
-  }, []);
-
-  useEffect(() => {
-    // Only set up the observer if images are loaded
-    if (!imagesLoaded) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true);
           let currentValue = 0;
-          const duration = 2000;
-          const interval = 50;
+          const duration = 2000; // Duration for animation
+          const interval = 50; // Interval for updates
           const step = Math.ceil(targetValue / (duration / interval));
 
           const intervalId = setInterval(() => {
@@ -68,16 +29,15 @@ const AnimatedStat = ({ targetValue, label }) => {
       { threshold: 0.5 }
     );
 
-    const element = document.getElementById(label);
-    if (element) {
-      observer.observe(element);
+    if (statRef.current) {
+      observer.observe(statRef.current);
     }
 
     return () => observer.disconnect();
-  }, [targetValue, label, hasAnimated, imagesLoaded]);
+  }, [targetValue, hasAnimated]);
 
   return (
-    <div className="flex flex-col items-center sm:px-10 px-5 py-5" id={label}>
+    <div className="flex flex-col items-center sm:px-10 px-5 py-5" ref={statRef}>
       <h2 className="sm:text-4xl text-2xl">{displayValue}+</h2>
       <h5 className="text-center">{label}</h5>
     </div>
@@ -127,4 +87,5 @@ const About = () => {
     </section>
   );
 };
+
 export default About;

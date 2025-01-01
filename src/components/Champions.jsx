@@ -25,7 +25,7 @@ const Champions = () => {
                 key={index}
                 className={`bg-white lg:w-72 md:w-1/2 w-full flex flex-col items-center p-10 rounded-2xl  ${badge.order}`}
             >
-                <img src={`images/${badge.image}`} alt={badge.title} />
+                <img src={`/images/${badge.image}`} alt={badge.title} />
                 <h3 className="font-bold">{badge.title}</h3>
                 <ul className="list-inside list-disc marker:text-primary-500 text-gray-500">
                 <li>kategori SMA</li>
